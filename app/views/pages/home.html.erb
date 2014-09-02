@@ -3,6 +3,10 @@
 		<h2>Welcome to...</h2>
 		<h1>physioGEEKS!</h1>
 		<p>currently under construction... please check back often...</p>
-		<p>...or better yet, <%= link_to "Join Us!", "#", class: "btn btn-default btn-sm" %></p>
+		<% if user_signed_in? %>
+			<p>Thanks for being a part of our community!</p>
+		<% else %>
+			<p>...or better yet, <%= link_to "Join Us!", new_user_registration_path, class: "btn btn-default btn-sm" %></p>
+		<% end %>
 	</div>
 </div>

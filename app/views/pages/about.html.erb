@@ -4,6 +4,10 @@
 		<p>physioGEEKS! is an online toolbox for contemporary physiotherapists.</p>
 		<p>Made by physios for physios, physioGEEKS is a one-stop source for assessments, 
 		tests, benchmarks, and notes for all your on-the-go physio needs.</p>
-		<p><%= link_to "Join Us!", "#", class: "btn btn-default btn-sm" %></p>
+		<% if user_signed_in? %>
+			<p>Such as YOU!</p>
+		<% else %>
+			<p><%= link_to "Join Us!", "#", class: "btn btn-default btn-sm" %></p>
+		<% end %>
 	</div>
 </div>
